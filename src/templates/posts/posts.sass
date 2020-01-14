@@ -1,0 +1,39 @@
+@import '../../global.sass'
+
+.posts 
+    // Layout
+    margin-top: 50px
+    display: flex 
+    flex-direction: column 
+    align-items: center
+    @extend .container
+    @extend .sm-px-4, .md-px-32, .lg-px-56
+
+    // Typography
+    font-weight: normal
+    @extend .text-sizing
+
+    // Animation
+    transition: .5s ease-in-out
+    .posted-info 
+        // Typography
+        @extend .fancy-text
+    .post 
+        // Layout
+        width: 100%
+        @extend .sm-px-3, .md-px-0
+        h1, h2, h3, h4, p
+            // Layout
+            line-height: 1.2em
+            @extend .lg-px-12
+            @extend .my-3
+
+            // Typography
+            text-align: left 
+
+            // Animation
+            transition: .2s ease-in-out
+        &:hover
+            h1, h2, h3, h4
+                color: $light-green
+        

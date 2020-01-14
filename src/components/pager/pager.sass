@@ -1,0 +1,17 @@
+@import '../../global.sass'
+
+.pager 
+    // Layout
+    width: 100%
+    margin-top: 25px
+    display: flex 
+    justify-content: space-between 
+    @extend .sm-px-3, .md-px-6, .lg-px-12
+    .more-btn 
+        // Misc Styling
+        background-color: $light-green 
+        &:hover 
+            background-color: darken($light-green, 10%)
+    .older 
+        // Layout
+        justify-self: flex-end

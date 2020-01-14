@@ -1,0 +1,48 @@
+@import '../../global.sass'
+    
+.copyright 
+    // Layout
+    display: flex 
+    justify-content: center
+    margin-bottom: 50px
+
+    // Typography
+    @extend .font-serif 
+    
+    // Misc Styling
+    color: #6c757d
+
+.footer 
+    // Layout
+    margin: 50px 0 -30px 0
+    height: 200px
+    display: flex 
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+    // Misc Styling
+    border-top: 1px solid rgba(0,0,0, .4)
+    .icon 
+        // Layout
+        height: 55px
+        width: 55px
+        display: flex 
+        justify-content: center 
+        align-items: center
+        background-color: black
+        border-radius: 50%
+        @extend .mx-4
+
+        // Animation
+        transition: .2s ease-in-out
+        &:hover 
+            background-color: #0085A1
+        img 
+            // Layout
+            height: 30px
+            width: 30px
+            
+    .brand 
+        // Layout
+        @extend .mx-4

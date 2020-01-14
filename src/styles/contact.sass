@@ -1,0 +1,66 @@
+@import '../global.sass'
+
+.contact .banner-subTitle
+    align-self: center
+
+.contact-form 
+    // Layout
+    display: flex 
+    flex-direction: column
+    align-items: center
+    margin-top: 50px
+    @extend .sm-px-3, .md-px-12
+    @extend .container 
+    .form-title 
+        @extend .sm-mx-3, .md-mx-12
+
+        // Typography
+        @extend .text-2xl
+    .formik-form 
+        // Layout
+        display: flex 
+        flex-direction: column
+        align-items: center
+        margin-top: 25px
+        @extend .sm-w-11_12, .md-w-9_12, .lg-w-8_12
+        .field
+            // Layout
+            width: 100%
+            @extend .py-8
+
+            // Typography
+            @extend .font-serif
+            @extend .text-2xl
+
+            // Misc Styling
+            color: rgba(0,0,0,.5)
+            border-bottom: 1px solid rgba(0,0,0, .4)
+        .error 
+            // Layout
+            margin-top: 10px
+
+            // Typography
+            font-weight: 200
+            @extend .text-base
+
+            // Misc Styling
+            color: red
+        .more-btn 
+            // Layout
+            align-self: flex-start
+            margin-top: 65px
+            padding: 20px 25px 20px 25px
+
+            // Typography
+            @extend .text-base 
+            @extend .font-sans 
+
+            // Animation
+            transition: .2s ease-in-out
+
+            // Misc Styling
+            background-color: $light-green
+            &:hover 
+                background-color: darken($light-green, 10%)
+            
+    

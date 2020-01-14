@@ -1,0 +1,39 @@
+@import '../global.sass'
+
+.courses 
+    // Layout
+    margin-top: 50px
+    max-width: 1000px
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    justify-items: center
+    row-gap: 15px
+    @extend .container
+
+.video-title 
+    // Layout
+    margin-top: 35px
+    padding-top: 15px
+    @extend .sm-text-center, .md-text-left
+
+    // Typography
+    font-weight: bold
+
+    // Misc Styling
+    border-top: 1px solid rgba(0,0,0, .4)
+.video-preview
+    // Layout
+    margin: 15px 0 50px 0 
+    width: 100%
+    height: 500px
+    @extend .container
+    @media screen and (max-width: 760px)
+        height: 400px
+    @media screen and (max-width: 500px)
+        height: 300px
+    @media screen and (max-width: 350px)
+        height: 200px
+
+
+
+   

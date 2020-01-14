@@ -1,0 +1,98 @@
+@import '../../global.sass'
+
+.light-bg 
+    // Misc Styling
+    background-color: #fff
+    color: #212529
+    h1 
+        color: #000
+    a 
+        // Animation
+        transition: .2s ease-in-out
+        &:hover 
+            color: $light-green 
+.transparent-bg 
+    // Misc Styling
+    color: #fff
+    a 
+        // Animation
+        transition: .2s ease-in-out
+        &:hover 
+            color: darken(#fff, 15%) 
+.header 
+    // Layout
+    width: 100vw
+    position: fixed
+    display: flex 
+    flex-direction: column
+    @extend .py-4 
+    z-index: 10
+
+    // Typography
+    font-weight: bold 
+
+    // Animation
+    transition: .2s ease-in-out 
+
+    // Misc Styling
+    @media screen and (max-width: 850px)
+        background-color: #fff
+        color: rgba(0,0,0,.5)
+    .wrapper 
+        // Layout
+        display: flex 
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap 
+    h1 
+        // Layout
+        min-width: 250px 
+
+        // Typography
+        font-weight: bold 
+        @extend .text-2xl
+        @media screen and (max-width: 850px)
+            color: #000
+    .nav-burger 
+        // Layout
+        display: none
+        padding: 12px 
+
+        // Typography
+        color: #000
+        font-weight: bold
+
+        // Misc Styling
+        border: 1px dotted #000
+        border-radius: 2px
+    .nav-links
+        // Typography
+        text-transform: uppercase
+        @extend .text-sm
+    .nav-links-wide 
+        @extend .nav-links
+        // Layout
+        width: 500px
+        display: flex
+        justify-content: space-between
+    .nav-links-col  
+        @extend .nav-links
+        // Layout
+        height: 100%
+        display: flex
+        position: relative
+        flex-direction: column 
+        @extend .pl-4
+
+        // Animation
+        transition: .5s east-in-out
+        li 
+            // Layout
+            @extend .p-3
+
+@media screen and (max-width: 850px)
+    .header .nav-links-wide 
+        display: none
+    .header .nav-burger 
+        display: block 
+        

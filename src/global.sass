@@ -1,0 +1,111 @@
+@import '../node_modules/headwindcss/headwind.scss'
+@import url('https://fonts.googleapis.com/css?family=Lora:400i&display=swap') // Add Lora Font
+
+$dark-blue: #3563C9
+$gold: #CF9827
+$light-blue: #B0F2FF
+$red: #C95034
+$green: #27CF97
+$light-green: #0085A1
+
+body 
+    overflow-x: hidden
+
+// Wrap over .container to center everything
+.center 
+    // Layout
+    display: flex 
+    justify-content: center
+
+// Just supply background and hover colors per instance
+.more-btn 
+    // Layout
+    @extend .p-5
+
+    // Typography
+    text-transform: uppercase 
+    font-weight: bold 
+
+    // Animation
+    transition: .2s ease-in-out 
+
+    // Misc Styling
+    color: #fff
+
+// Base style for h tags and lists
+.text-sizing 
+    // Typography
+    color: #212529
+    h1, h2, h3, h4, h5 
+        // Layout
+        @extend .my-10
+    h1 
+        font-weight: bold
+        @extend .sm-text-3xl, .md-text-4xl, .lg-text-5xl 
+    h2 
+        font-weight: bold
+        @extend .sm-text-2xl, .md-text-3xl, .lg-text-4xl
+    h3 
+        @extend .sm-text-xl, .md-text-2xl, .lg-text-3xl
+    h4 
+        @extend .sm-text-lg, .lg-text-2xl
+    h5 
+        @extend .sm-text-lg, .lg-text-xl 
+    p    
+        @extend .font-serif
+        @extend .text-lg 
+    ul 
+        // Layout
+        margin-bottom: 15px
+        @extend .px-10
+
+        // Typography
+        @extend .font-serif
+        @extend .text-xl
+
+        // Misc Styling
+        list-style-type: disc
+        li 
+            // Layout
+            @extend .my-3
+    ol 
+        @extend ul
+        list-style-type: decimal
+
+.fancy-text 
+    // Typography
+    font-size: 20px
+    color: #868e96
+    font-family: 'Lora', 'Times New Roman', serif
+
+// Responsive wrapper for posts and services
+.post-structure 
+    margin-top: 75px
+    @extend .container
+    @extend .sm-px-6, .md-px-24, .lg-px-56
+
+    // Typography
+    @extend .text-sizing
+    h4 
+        // Typography
+        font-weight: bold
+        @extend .font-serif
+    p 
+        // Layout
+        margin: 20px 0 20px 0
+        @extend .text-xl
+    p code, ol code, ul p 
+        // Misc Styling
+        color: #e83e8c
+    pre, code // For code snippets
+        overflow-x: auto
+        background-color: #fff
+    a 
+        text-decoration: underline
+        &:hover 
+            color: $light-blue
+
+
+
+
+

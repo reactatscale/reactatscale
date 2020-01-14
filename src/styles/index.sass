@@ -1,0 +1,105 @@
+@import '../global.sass'
+    
+.featured 
+    // Layout
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    grid-gap: 25px
+    margin-top: 50px
+    @extend .container
+
+    .card 
+        // Layout
+        height: 500px
+        display: flex 
+        flex-direction: column 
+        justify-content: space-around
+        align-items: center
+        @extend .sm-px-4, .md-px-12
+        @extend .sm-mx-4, .md-mx-0
+
+        // Typography
+        text-align: center
+
+        // Misc Styling
+        border: 1px solid rgba(0,0,0,.125)
+        border-radius: .25rem
+        .icon 
+            // Layout
+            height: 150px
+            width: 150px
+        .title 
+            // Typography
+            text-transform: uppercase 
+            font-weight: bold
+            
+            @extend .text-2xl 
+        .desc 
+            // Typography
+            color: grey
+            @extend .text-xl
+            @extend .font-serif
+        .more-btn 
+            // Misc Styling
+            background-color: $dark-blue
+
+            // Animation
+            transition: .2s ease-in-out
+            &:hover 
+                background-color: $light-green
+
+.content 
+    // Layout
+    @extend .container
+    @extend .sm-px-2, .md-px-0
+
+    // Typography
+    @extend .text-sizing
+    .intro 
+        // Typography
+        @extend .font-serif
+    .reviews 
+        // Typography
+        @extend .fancy-text
+        .review 
+            // Layout
+            @extend .my-12
+
+.bt 
+    // Misc Styling
+    border-top: 1px solid rgba(0,0,0, .4)
+
+.latest-posts 
+    // Layout
+    display: flex
+    flex-direction: column 
+    @extend .container
+
+    // Typography
+    @extend .text-sizing
+    .posts 
+        // Layout
+        align-items: start
+        @extend .px-0
+    .all-posts-btn 
+        // Layout
+        margin-top: 10px
+        width: 200px 
+        align-self: flex-end
+        button 
+            @extend .more-btn
+
+            // Typography
+            letter-spacing: 1px
+
+            // Animation
+            transition: .2s ease-in-out 
+
+            // Misc Styling
+            background-color: $light-green
+            &:hover 
+                background-color: darken($light-green, 10%)
+        
+
+            
+
