@@ -1,5 +1,6 @@
 const path = require("path")
 const { paginate } = require('gatsby-awesome-pagination')
+const slugify = require('slugify')
 
 // * Generate slug per post
 module.exports.onCreateNode = ({ node, actions }) => {
@@ -22,12 +23,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const postTemplate = path.resolve('./src/templates/post/post.js')
     const res = await graphql(`
         query {
-            allMarkdownRemark {
+            allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
                 edges {
                     node {
                         fields {
                             slug
                         }
+                        frontmatter { postDate }
                     }
                 }
             }
@@ -44,10 +46,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
     const posts = res.data.allMarkdownRemark.edges
 
+
     posts.forEach((post, index) => {
         createPage({
             component: postTemplate,
-            path: `/posts/${post.node.fields.slug}`,
+            path: `/posts/${slugify(post.node.frontmatter.postDate.toLowerCase())}/${post.node.fields.slug}`,
             context: {
                 slug: post.node.fields.slug,
                 next: index === 0 ? null : posts[index - 1].node,
@@ -56,6 +59,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         })
     })
 }
+
 
 
 

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
+import slugify from 'react-slugify'
 
 // * Components 
 import Layout from "../../components/layout"
@@ -50,7 +51,7 @@ const Posts = ({ data, pageContext }) => {
                         const pf = p.frontmatter
 
                         return <div className="post" key={i}>
-                            <Link to={'/posts/' + p.fields.slug}>
+                            <Link to={`/posts/${slugify(p.frontmatter.postDate)}/${p.fields.slug}`}>
                                 <h2 className='post-title'>{pf.title}</h2>
                                 {pf.description && <h4 className='post-description'>{pf.description}</h4>}
                             </Link>
